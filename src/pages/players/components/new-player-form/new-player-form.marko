@@ -1,7 +1,7 @@
 $ const id = "add-player-modal";
 $ const heading = state.isAdd ? "Add Player" : "Edit player";
 <div class="modal fade edit-player-modal" id=`${id}` tabindex="-1" role="dialog" aria-labelledby=`${id}-label`>
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
         <div class="modal-header">
           <i class="fas fa-user-plus"/>
@@ -9,7 +9,7 @@ $ const heading = state.isAdd ? "Add Player" : "Edit player";
           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form id="add-new-player-form">
             <ul class="nav nav-tabs">
               <li class=`active nav-item`>
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">General</button>
