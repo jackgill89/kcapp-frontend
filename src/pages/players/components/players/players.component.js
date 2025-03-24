@@ -37,13 +37,26 @@ module.exports = {
             this.state.players = this.input.players;
         } else {
             this.state.players = _.reject(this.input.players, (player) => {
-                return player.office_id !== officeId ;
+                return player.office_id !== officeId;
             });
         }
         this.setStateDirty("players");
     },
     addPlayer() {
-        this.getComponent('add-player-modal').reset()
+        // Attempt to call the component's reset method if it exists
+        const addPlayerModal = this.getComponent('add-player-modal');
+        if (addPlayerModal && typeof addPlayerModal.reset === 'function') {
+            addPlayerModal.reset();
+        } else {
+            // Fallback: If no reset method exists, try to reset a form within the modal
+            const $modal = $('#add-player-modal');
+            const $form = $modal.find('form');
+            if ($form.length > 0) {
+                $form[0].reset();
+            } else {
+                console.warn("No reset function or form found in add-player-modal.");
+            }
+        }
     },
     editPlayer(playerId) {
         const player = _.find(this.state.players, (player) => {
