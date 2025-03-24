@@ -43,7 +43,7 @@ module.exports = {
         this.setStateDirty("players");
     },
     addPlayer() {
-        this.getComponent('add-player-form').reset()
+        this.getComponent('add-player-modal').reset()
     },
     editPlayer(playerId) {
         const player = _.find(this.state.players, (player) => {
