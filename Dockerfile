@@ -1,4 +1,5 @@
 # Create our build image
+# Must be node-18, ref https://github.com/docker/build-push-action/issues/1071
 FROM node:18-alpine AS BUILD_IMAGE
 
 # Add git and curl
@@ -15,7 +16,7 @@ RUN npm install --only=production
 COPY . .
 
 # Create actual image
-FROM node:18-alpine
+FROM node:22-alpine
 
 WORKDIR /usr/src/kcapp
 
