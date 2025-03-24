@@ -32,20 +32,20 @@
               </li>
             </ul>
         </div>
-                <if(state.isController)>
-                  <ul class="navbar-nav" style="float: right;">
-                    <li class="nav-item">
-                      <a href="/controller" style="font-weight: 800;">New Match</a>
-                    </li>
-                  </ul>
-                </if>
-                <ul class="navbar-nav" style="float: right;">
-                  <li class="nav-item">
-                    <a data-toggle="modal" data-target="#modal-configure-kcapp">
-                      <i class="fas fa-cogs" data-toggle="tooltip" data-placement="top" title="View"/>
-                    </a>
-                  </li>
-                </ul>
-            </div>
-        </nav>
+        <if(state.isController)>
+            <ul class="navbar-nav" style="float: right;">
+                <li class="nav-item">
+                    <a href="/controller" style="font-weight: 800;">New Match</a>
+                </li>
+            </ul>
+        </if>
+        <ul class="navbar-nav" style="float: right;">
+            <li class="nav-item">
+                <a data-toggle="modal" data-target="#modal-configure-kcapp">
+                    <i class="fas fa-cogs" data-toggle="tooltip" data-placement="top" title="View"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <configure-kcapp-modal />
