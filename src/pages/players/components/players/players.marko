@@ -13,7 +13,7 @@
   <div>
     <options-panel key="options-panel" players=input.players on-add-player("addPlayer")/>
     <office-selector offices=input.offices clazz="float-right" on-office-changed("officeChanged")/>
-    <div class="block-container no-padding">
+    <div class="block-container">
       <players-table players=state.players offices=input.offices on-edit-player("editPlayer")/>
     </div>
     <div class='text-center'>
