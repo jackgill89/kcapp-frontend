@@ -39,7 +39,25 @@ module.exports = {
     },
     setDart(value, multiplier) {
         let dart = this.state;
+
         if (value !== null) {
+            // Check if the value contains a dash (e.g., T-20 or D-5)
+            if (typeof value === 'string' && value.includes('-')) {
+                // Split the string by the dash and parse the value and multiplier
+                const parts = value.split('-');
+                value = parseInt(parts[1]); // Get the number after the dash
+                multiplier = parts[0] === 'T' ? 3 : (parts[0] === 'D' ? 2 : 1); // Set the multiplier based on 'T', 'D', or 'S'
+            } else if (typeof value === 'string' && value[0].toUpperCase() === 'T') {
+                value = parseInt(value.substring(1)); // Get the number after the 'T'
+                multiplier = 3; // Triple score (T)
+            } else if (typeof value === 'string' && value[0].toUpperCase() === 'D') {
+                value = parseInt(value.substring(1)); // Get the number after the 'D'
+                multiplier = 2; // Double score (D)
+            } else {
+                value = parseInt(value); // Just a regular number (S or single score)
+                multiplier = 1; // Single score
+            }
+
             dart.text += value;
             dart.value = value;
             dart.multiplier = multiplier;
