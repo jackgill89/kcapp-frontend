@@ -15,7 +15,7 @@
   </if>
   <div class="float-right">
     <div class="btn-group">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Options&nbsp;&nbsp;<span class="caret"/>
         <span class="sr-only"/>
       </button>
@@ -32,10 +32,10 @@
           </li>
         </if>
         <li>
-          <a id="change-player-order" data-toggle="modal" data-target="#modal-player-order"  on-click('changeOrder')>Change Order</a>
+          <a id="change-player-order" data-bs-toggle="modal" data-bs-target="#modal-player-order"  on-click('changeOrder')>Change Order</a>
         </li>
         <li>
-          <a id="show-qr-code" data-toggle="modal" data-target="#modal-show-qr-code">Show QR</a>
+          <a id="show-qr-code" data-bs-toggle="modal" data-bs-target="#modal-show-qr-code">Show QR</a>
         </li>
         <if(!state.isOfficial)>
           <li class="divider" role="separator"/>

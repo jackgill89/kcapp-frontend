@@ -5,9 +5,7 @@ $ var heading = input.heading || "Add Group";
     <div class="block-container-header">
       <i class="fas fa-user-plus"/>
       <span class="ml-10">${heading}</span>
-      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="block-container-with-header">
       <form>
@@ -19,7 +17,7 @@ $ var heading = input.heading || "Add Group";
           <label class="control-label" >Division</label>
           <input class="form-control" type="number" value=state.division on-input("divisionChange")/>
         </div>
-        <button class="btn btn-default btn-close" type="button" data-dismiss="modal">Close</button>
+        <button class="btn btn-default btn-close" type="button" data-bs-dismiss="modal">Close</button>
         <button class="btn btn-primary btn-submit" type="submit" on-click("addGroup")>
           <i class="fas fa-user-plus"/>
           <span class="ml-10">${heading}</span>

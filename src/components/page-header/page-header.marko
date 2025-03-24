@@ -40,7 +40,7 @@ $ let icon = input.icon || "fa-trophy";
       <ul class="nav nav-pills">
         <for|tab, idx| of=input.tabs>
           <li class=`${idx == 0 ? "active" : ""}` role="presentation">
-            <a href=`#${tab.href}` data-toggle="tab">${tab.name}</a>
+            <a href=`#${tab.href}` data-bs-toggle="tab">${tab.name}</a>
           </li>
         </for>
       </ul>

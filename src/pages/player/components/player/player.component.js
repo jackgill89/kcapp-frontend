@@ -140,7 +140,7 @@ module.exports = {
         }]
         var scoresChart = new Chart("canvas-scores", this.getChartConfig('Scores Per Week|', 'line', 'Date', 'Count', labels, datasetsScores));
 
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-bs-toggle="tooltip"]').tooltip();
 
         this.state.chart_hitrates = new Chart("canvas-hit-rates", {
             type: 'radar',

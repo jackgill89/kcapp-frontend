@@ -1,8 +1,8 @@
 <page-header heading=`${input.tournament.name}` subheading="Tournament"/>
 <div class="block-container no-padding">
 	<ul class="nav nav-tabs">
-		<li role="presentation" class="active"><a href="#matches" data-toggle="tab">Matches</a></li>
-    <li role="presentation"><a href="#metadata" data-toggle="tab">Metadata</a></li>
+		<li role="presentation" class="active"><a href="#matches" data-bs-toggle="tab">Matches</a></li>
+    <li role="presentation"><a href="#metadata" data-bs-toggle="tab">Metadata</a></li>
   </ul>
 	<div class="tab-content" style="width: 100%;">
 		<div class="tab-pane active" role="tabpanel" id="matches">
@@ -74,7 +74,7 @@
 									</div>
 								</td>
 								<td class="text-center">
-									<button class="btn btn-primary" type="button" data-toggle="modal" data-target=`#set-score-modal` data-match-id=match.id on-click('onEditScore')>
+									<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target=`#set-score-modal` data-match-id=match.id on-click('onEditScore')>
 										<i class="fas fa-keyboard"/>
 									</button>
 									<button class="btn btn-primary" type="button">

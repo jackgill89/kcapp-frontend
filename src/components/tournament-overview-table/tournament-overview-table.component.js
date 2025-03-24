@@ -50,7 +50,7 @@ module.exports = {
     },
     onMount() {
         $(function() {
-            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-bs-toggle="tooltip"]').tooltip();
           });
     },
     updateStandings(overview) {
