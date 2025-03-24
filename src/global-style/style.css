@@ -573,4 +573,8 @@ a:hover {
   background-color: #18AC79;
   border-color: #18AC79;
 }
+.modal-header {
+  background-color: #18AC79;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

@@ -21,9 +21,9 @@ $ const heading = state.isAdd ? "Add Player" : "Edit player";
 
             <div class="tab-content">
               <div id="home-tab-pane" class=`tab-pane active`>
-                <div class="form-group">
-                  <label class="control-label" for="player-firstname-input">First Name</label>
-                  <input class="form-control" type="text" id='first-name-input' value=state.first_name on-input("firstNameChange")/>
+                <div class="form-floating mb-3">
+                   <input type="text" class="form-control" id="first-name-input" placeholder="First Name" value=state.first_name on-input("firstNameChange") />
+                   <label for="player-firstname-input">First Name</label>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="player-lastname-input">Last Name</label>
