@@ -43,8 +43,8 @@ $ const heading = state.isAdd ? "Add Player" : "Edit player";
                   <input class="form-control" type="text" value=state.vocal_name on-input("vocalNameChange") placeholder="Vocal Name" />
                 </div>
                 <div class="form-floating mb-3">
+                  <input class="form-control" id="player-slack-handle-input" type="text" value=state.slack_handle on-input("slackHandleChange") placeholder="Slack Handle"/>
                   <label class="control-label" for="player-slack-handle-input">Slack Handle</label>
-                  <input class="form-control" type="text" value=state.slack_handle on-input("slackHandleChange")/>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="player-color-input">Color</label>
@@ -56,20 +56,20 @@ $ const heading = state.isAdd ? "Add Player" : "Edit player";
                   </div>
                 </div>
                 <div class="form-floating mb-3">
+                  <input class="form-control" type="text" id="player-profile-pic-input" value=state.profile_pic_url on-input("profilePicChange") placeholder="Profile Picture URL" />
                   <label class="control-label" for="player-profile-pic-input">Profile Picture URL</label>
-                  <input class="form-control" type="text" value=state.profile_pic_url on-input("profilePicChange")/>
                 </div>
                 <div class="form-floating mb-3">
+                  <input class="form-control" id="player-smartcard-uid-input" type="text" value=state.smartcard_uid on-input("smartcardUIDChange") placerholder="Smartcard UID" />
                   <label class="control-label" for="player-smartcard-uid-input">Smartcard UID</label>
-                  <input class="form-control" type="text" value=state.smartcard_uid on-input("smartcardUIDChange")/>
                 </div>
                 <div class="form-floating mb-3">
-                  <label class="control-label" for="player-office-input">Office</label>
-                  <select class="form-control" on-change("officeChanged")>
+                  <select class="form-control" on-change("officeChanged") id="player-office-input" aria-label="Office Select">
                     <for|id, office| in=input.offices>
                       <option value=id selected=(state.office_id == id)>${office.name}</option>
                     </for>
                   </select>
+                  <label class="control-label" for="player-office-input">Office</label>
                 </div>
               </div>
               <div id="options-tab-pane" class=`tab-pane fade`>
