@@ -13,42 +13,42 @@
           kcapp
         </a>
       </div>
-      <div class="navbar-collapse collapse" id="navbar">
-        <ul class="nav navbar-nav">
-          <li>
+      <div class="navbar navbar-expand-lg" id="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
             <a href="/players">Players</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/practice">Practice</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/statistics/weekly">Statistics</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/statistics/leaderboard">Leaderboard</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/tournaments">Tournaments</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/elo">Elo</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/badges">Badges</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="/matches">Matches</a>
           </li>
         </ul>
         <if(state.isController)>
-          <ul class="nav navbar-nav" style="float: right;">
-            <li>
+          <ul class="navbar-nav" style="float: right;">
+            <li class="nav-item">
               <a href="/controller" style="font-weight: 800;">New Match</a>
             </li>
           </ul>
         </if>
-        <ul class="nav navbar-nav" style="float: right;">
-          <li>
+        <ul class="navbar-nav" style="float: right;">
+          <li class="nav-item">
             <a data-toggle="modal" data-target="#modal-configure-kcapp">
               <i class="fas fa-cogs" data-toggle="tooltip" data-placement="top" title="View"/>
             </a>
